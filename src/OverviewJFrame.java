@@ -10,7 +10,9 @@ public class OverviewJFrame extends JFrame {
     }
     public static void main(String[] args){
         JFrame frame = new OverviewJFrame();
+        frame.setTitle("Anniversary");
         frame.setSize(400, 400);
         frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
     }
 }
