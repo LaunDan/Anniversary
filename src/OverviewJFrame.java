@@ -4,7 +4,7 @@ public class OverviewJFrame extends JFrame {
     private JPanel Anniversary;
     private JButton addButton;
     private JButton deleteButton;
-    private JList list1;
+    private JList personsJList;
     private JLabel todayJLabel;
     private JLabel soonestJLabel;
     private JLabel birthdayJLabel;
