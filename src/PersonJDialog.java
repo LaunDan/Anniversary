@@ -10,8 +10,13 @@ public class PersonJDialog extends JDialog {
     public PersonJDialog() {
         setContentPane(AddPerson);
         setModal(true);
+        JFormattedTextField birthdayFormattedTextField = new JFormattedTextField();
+        birthdayFormattedTextField.setFormatterFactory();
+
 
     }
+
+
 
 
 }
