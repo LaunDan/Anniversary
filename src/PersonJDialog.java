@@ -4,7 +4,7 @@ public class PersonJDialog extends JDialog {
     private JPanel AddPerson;
     private JButton OKButton;
     private JTextField nameTextField;
-    private JFormattedTextField birthdayFirmattedTextField;
+    private JFormattedTextField birthdayFormattedTextField;
 
 
     public PersonJDialog() {
