@@ -23,12 +23,13 @@ public class PersonJDialog extends JDialog {
         DateFormatter df = new DateFormatter(format);
         JFormattedTextField birthdayFormattedTextField = new JFormattedTextField(df);
         birthdayFormattedTextField.setValue(new Date());
+        Date date = new Date();
 
         OkButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    LocalDate birthday = Date.parseIt(birthdayFormattedTextField.getText());
+                    LocalDate birthday = date.parseIt(birthdayFormattedTextField.getText());
                     person = new Person(nameTextField.getText(), birthday);
                     dispose();
                 } catch (ParseException | IllegalArgumentException ex){
