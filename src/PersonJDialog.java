@@ -23,6 +23,7 @@ public class PersonJDialog extends JDialog {
         DateFormatter df = new DateFormatter(format);
         JFormattedTextField birthdayFormattedTextField = new JFormattedTextField(df);
         birthdayFormattedTextField.setValue(new Date());
+        //try to input insert date
         Date date = new Date();
 
         OkButton.addActionListener(new ActionListener() {
