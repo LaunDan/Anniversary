@@ -12,15 +12,20 @@ public class Person {
         return name;
     }
 
-    public Person(String name, LocalDate birthday) throws IllegalArgumentException{
-        if (name.length() < 3){
+    public Person(String name, LocalDate birthday) throws IllegalArgumentException {
+        if (name.length() < 3) {
             throw new IllegalArgumentException("Name is too short..");
         }
-        if (birthday.isAfter(LocalDate.now())){
-            throw new IllegalArgumentException("Date of birthday can't be in the future..")
+        if (birthday.isAfter(LocalDate.now())) {
+            throw new IllegalArgumentException("Date of birthday can't be in the future..");
         }
 
         this.name = name;
         this.birthday = birthday;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
