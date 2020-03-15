@@ -15,7 +15,7 @@ public class OverviewJFrame extends JFrame {
     private AdministratorOfPerson adminOfPerson = new AdministratorOfPerson();
 
     public OverviewJFrame() {
-        initComponents();
+
         todayJLabel.setText(Date.formatIt(LocalDateTime.now()));
         personsJList.setModel(adminOfPerson.getModel());
         if (!adminOfPerson.getPersons().isEmpty()){
@@ -26,6 +26,7 @@ public class OverviewJFrame extends JFrame {
         this.pack();
 
     }
+
 
     public static void main(String[] args) {
         JFrame frame = new OverviewJFrame();
