@@ -33,7 +33,20 @@ public class OverviewJFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 PersonJDialog personJDialog = new PersonJDialog(this, true);
-                
+                personJDialog.setLocationRelativeTo(null);
+                personJDialog.setVisible(true);
+
+                Person newPerson = personJDialog.getPerson();
+                if (newPerson != null){
+                    adminOfPerson.add(newPerson);
+                }
+            }
+        });
+
+        deleteButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
