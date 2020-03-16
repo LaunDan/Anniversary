@@ -18,7 +18,7 @@ public class OverviewJFrame extends JFrame {
 
     public OverviewJFrame() {
 
-        todayJLabel.setText(Date.formatIt(LocalDate.now()));
+        todayJLabel.setText(Dater.formatIt(LocalDate.now()));
         personsJList.setModel(adminOfPerson.getModel());
         if (!adminOfPerson.getPersons().isEmpty()){
             personsJList.setSelectedIndex(0);
