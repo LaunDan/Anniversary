@@ -22,7 +22,7 @@ public class OverviewJFrame extends JFrame {
 
         todayJLabel.setText(Dater.formatIt(LocalDate.now()));
         personsJList.setModel(adminOfPerson.getModel());
-        if (!adminOfPerson.getPersons().isEmpty()){
+        if (!adminOfPerson.getPersons().isEmpty()) {
             personsJList.setSelectedIndex(0);
         }
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -37,7 +37,7 @@ public class OverviewJFrame extends JFrame {
                 personJDialog.setVisible(true);
 
                 Person newPerson = personJDialog.getPerson();
-                if (newPerson != null){
+                if (newPerson != null) {
                     adminOfPerson.add(newPerson);
                 }
             }
@@ -46,7 +46,10 @@ public class OverviewJFrame extends JFrame {
         deleteButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Person choosenPerson = (Person) personsJList.getSelectedValue();
+                if (choosenPerson != null) {
+                    adminOfPerson.delete(choosenPerson);
+                }
             }
         });
     }
