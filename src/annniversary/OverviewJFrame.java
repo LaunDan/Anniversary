@@ -1,3 +1,5 @@
+package annniversary;
+
 import javax.swing.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -16,7 +18,7 @@ public class OverviewJFrame extends JFrame {
 
     public OverviewJFrame() {
 
-        todayJLabel.setText(Date.formatIt(LocalDateTime.now()));
+        todayJLabel.setText(Date.formatIt(LocalDate.now()));
         personsJList.setModel(adminOfPerson.getModel());
         if (!adminOfPerson.getPersons().isEmpty()){
             personsJList.setSelectedIndex(0);

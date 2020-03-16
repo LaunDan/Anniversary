@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="PersonJDialog">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="annniversary.PersonJDialog">
   <grid id="cbd77" binding="AddPerson" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
@@ -14,7 +14,7 @@
         </constraints>
         <properties>
           <labelFor value="7010e"/>
-          <text value="Date of birthday:"/>
+          <text value="annniversary.Date of birthday:"/>
         </properties>
       </component>
       <component id="7706c" class="javax.swing.JLabel">
