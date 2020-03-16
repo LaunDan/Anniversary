@@ -21,7 +21,8 @@ public class PersonJDialog extends JDialog {
     private Person person = null;
 
 
-    public PersonJDialog() {
+    public PersonJDialog(ActionListener parent, boolean modal) {
+        super(parent, modal);
 
         OkButton.addActionListener(new ActionListener() {
             @Override
