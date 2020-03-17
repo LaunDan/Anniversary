@@ -31,8 +31,9 @@ public class OverviewJFrame extends JFrame {
 
     public OverviewJFrame() {
         // find condition
-        if () {
-            Person choosenPerson = (Person) personsJList.getSelectedValue();
+        Person choosenPerson = (Person) personsJList.getSelectedValue();
+        if (choosenPerson != null) {
+
             birthdayJLabel.setText(Dater.formatIt(choosenPerson.getBirthday()));
         }
         todayJLabel.setText(Dater.formatIt(LocalDate.now()));
