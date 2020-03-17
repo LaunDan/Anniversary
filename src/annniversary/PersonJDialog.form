@@ -14,7 +14,7 @@
         </constraints>
         <properties>
           <labelFor value="7010e"/>
-          <text value="annniversary.Date of birthday:"/>
+          <text value="Date of birthday:"/>
         </properties>
       </component>
       <component id="7706c" class="javax.swing.JLabel">

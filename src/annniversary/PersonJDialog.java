@@ -22,7 +22,7 @@ public class PersonJDialog extends JDialog {
 
 
     public PersonJDialog(ActionListener parent, boolean modal) {
-        super(parent, modal);
+
 
         OkButton.addActionListener(new ActionListener() {
             @Override

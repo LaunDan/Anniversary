@@ -19,7 +19,7 @@ public class Person {
             throw new IllegalArgumentException("Name is too short..");
         }
         if (birthday.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("Anniversary. Date of birthday can't be in the future..");
+            throw new IllegalArgumentException("Anniversary. Date of birth can't be in the future..");
         }
 
         this.name = name;
@@ -30,4 +30,6 @@ public class Person {
     public String toString() {
         return name;
     }
+
+
 }

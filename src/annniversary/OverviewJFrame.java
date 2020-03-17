@@ -18,12 +18,28 @@ public class OverviewJFrame extends JFrame {
     private JLabel ageJLabel;
     private AdministratorOfPerson adminOfPerson = new AdministratorOfPerson();
 
-    public OverviewJFrame() {
 
+
+    public static void main(String[] args) {
+        JFrame frame = new OverviewJFrame();
+        frame.setTitle("Anniversary");
+        frame.setSize(500, 500);
+        frame.setVisible(true);
+        frame.setLocationRelativeTo(null);
+
+    }
+
+    public OverviewJFrame() {
+        // find condition
+        if () {
+            Person choosenPerson = (Person) personsJList.getSelectedValue();
+            birthdayJLabel.setText(Dater.formatIt(choosenPerson.getBirthday()));
+        }
         todayJLabel.setText(Dater.formatIt(LocalDate.now()));
         personsJList.setModel(adminOfPerson.getModel());
         if (!adminOfPerson.getPersons().isEmpty()) {
             personsJList.setSelectedIndex(0);
+
         }
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setContentPane(Anniversary);
@@ -33,6 +49,7 @@ public class OverviewJFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 PersonJDialog personJDialog = new PersonJDialog(this, true);
+                personJDialog.setSize(400, 200);
                 personJDialog.setLocationRelativeTo(null);
                 personJDialog.setVisible(true);
 
@@ -55,13 +72,6 @@ public class OverviewJFrame extends JFrame {
     }
 
 
-    public static void main(String[] args) {
-        JFrame frame = new OverviewJFrame();
-        frame.setTitle("Anniversary");
-        frame.setSize(500, 500);
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
 
-    }
 
 }
