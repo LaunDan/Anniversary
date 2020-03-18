@@ -1,6 +1,9 @@
 package annniversary;
 
 import java.time.LocalDate;
+import java.time.Period;
+import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAmount;
 
 public class Person {
     private String name;
@@ -31,6 +34,11 @@ public class Person {
 
     public LocalDate getBirthday() {
         return birthday;
+    }
+    public long getAge(){
+        TemporalAmount betwen = Period.between(birthday, LocalDate.now());
+        long age = betwen.get(ChronoUnit.YEARS);
+        return age;
     }
 
 }
