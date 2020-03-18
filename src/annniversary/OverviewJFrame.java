@@ -30,7 +30,7 @@ public class OverviewJFrame extends JFrame {
     }
 
     public OverviewJFrame() {
-        // find condition
+
         Person choosenPerson = (Person) personsJList.getSelectedValue();
         if (choosenPerson != null) {
 
