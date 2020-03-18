@@ -6,9 +6,7 @@ public class Person {
     private String name;
     private LocalDate birthday;
 
-    public LocalDate getBirthday() {
-        return birthday;
-    }
+
 
     public String getName() {
         return name;
@@ -31,5 +29,8 @@ public class Person {
         return name;
     }
 
+    public LocalDate getBirthday() {
+        return birthday;
+    }
 
 }

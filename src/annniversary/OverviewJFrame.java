@@ -3,6 +3,8 @@ package annniversary;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -22,6 +24,7 @@ public class OverviewJFrame extends JFrame {
 
     public static void main(String[] args) {
         JFrame frame = new OverviewJFrame();
+        frame.setDefaultLookAndFeelDecorated(true);
         frame.setTitle("Anniversary");
         frame.setSize(500, 500);
         frame.setVisible(true);
@@ -31,11 +34,7 @@ public class OverviewJFrame extends JFrame {
 
     public OverviewJFrame() {
 
-        Person choosenPerson = (Person) personsJList.getSelectedValue();
-        if (choosenPerson != null) {
 
-            birthdayJLabel.setText(Dater.formatIt(choosenPerson.getBirthday()));
-        }
         todayJLabel.setText(Dater.formatIt(LocalDate.now()));
         personsJList.setModel(adminOfPerson.getModel());
         if (!adminOfPerson.getPersons().isEmpty()) {
@@ -67,6 +66,16 @@ public class OverviewJFrame extends JFrame {
                 Person choosenPerson = (Person) personsJList.getSelectedValue();
                 if (choosenPerson != null) {
                     adminOfPerson.delete(choosenPerson);
+                }
+            }
+        });
+        personsJList.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                Person choosenPerson = (Person) personsJList.getSelectedValue();
+                if (choosenPerson != null) {
+                    birthdayJLabel.setText(Dater.formatIt(choosenPerson.getBirthday()));
                 }
             }
         });
