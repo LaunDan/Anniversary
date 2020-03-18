@@ -76,7 +76,9 @@ public class OverviewJFrame extends JFrame {
                 Person choosenPerson = (Person) personsJList.getSelectedValue();
                 if (choosenPerson != null) {
                     birthdayJLabel.setText(Dater.formatIt(choosenPerson.getBirthday()));
+                    ageJLabel.setText(String.valueOf(Long.parseLong(String.valueOf(choosenPerson.getAge()))) + " years old");
                 }
+
             }
         });
     }
