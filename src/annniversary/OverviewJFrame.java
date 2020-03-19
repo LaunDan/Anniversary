@@ -77,6 +77,7 @@ public class OverviewJFrame extends JFrame {
                 if (choosenPerson != null) {
                     birthdayJLabel.setText(Dater.formatIt(choosenPerson.getBirthday()));
                     ageJLabel.setText(String.valueOf(Long.parseLong(String.valueOf(choosenPerson.getAge()))) + " years old");
+                    soonestJLabel.setText(String.valueOf((Long.parseLong((String.valueOf(choosenPerson.howSoon()))))) + " days till next birthday");
                 }
 
             }

@@ -41,4 +41,9 @@ public class Person {
         return age;
     }
 
+    public long howSoon(){
+        long sooner = ChronoUnit.DAYS.between(LocalDate.now(), birthday);
+        return sooner;
+    }
+
 }
