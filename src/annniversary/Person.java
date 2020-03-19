@@ -42,7 +42,9 @@ public class Person {
     }
 
     public long howSoon(){
-        long sooner = ChronoUnit.DAYS.between(LocalDate.now(), birthday);
+        LocalDate now = LocalDate.now();
+        int thisYear = now.getYear();
+        long sooner = ChronoUnit.DAYS.between(LocalDate.now(), birthday.withYear(thisYear));
         return sooner;
     }
 
