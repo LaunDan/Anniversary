@@ -24,7 +24,7 @@ public class OverviewJFrame extends JFrame {
 
     public static void main(String[] args) {
         JFrame frame = new OverviewJFrame();
-        frame.setDefaultLookAndFeelDecorated(true);
+        setDefaultLookAndFeelDecorated(true);
         frame.setTitle("Anniversary");
         frame.setSize(600, 500);
         frame.setVisible(true);
